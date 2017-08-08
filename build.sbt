@@ -8,3 +8,9 @@ libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3" % "runtime
 libraryDependencies += "net.databinder.dispatch" %% "dispatch-core" % "0.13.1"
 
 
+assemblyShadeRules in assembly ++= Seq(
+  ShadeRule.rename("io.netty.**" -> "com.github.mauricio.@0")
+    .inLibrary("com.github.mauricio" %% "postgresql-async" % "0.2.21")
+    .inProject
+    .inAll
+)
