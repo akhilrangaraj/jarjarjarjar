@@ -1,16 +1,17 @@
 # JAR JAR JAR JAR JAR JAR JAR JAR JAR JAR JAR
 
 
-## HOW TO SHADE
+## HOW TO SHADE SBT PROJECTS
 
 - FIND TOP LEVEL DEPENDENCY USING: `sbt dependencyGraph`
-- ADD TO BUILD.SBT ```assemblyShadeRules in assembly ++= Seq(
+- ADD TO BUILD.SBT 
+```
+assemblyShadeRules in assembly ++= Seq(
   ShadeRule.rename("io.netty.**" -> "com.github.mauricio.@0")
     .inLibrary("com.github.mauricio" %% "postgresql-async" % "0.2.21")
     .inProject
     .inAll
 )
-
 ```
 - `sbt assembly && java -jar target/scala-2.12/jarjarjarjarjarjarjarjarajrajra....`
 - PROFIT. (except sbt run still screwed)
