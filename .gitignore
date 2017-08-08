@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Java
+*.class
+
+# sbt
+target/
+lib_managed
+shaded/
+
+# IntelliJ
+project/project/
+project/target/
+.idea

@@ -1,0 +1,10 @@
+version: '2'
+services:
+  postgres:
+    image: library/postgres:9
+    environment:
+      - POSTGRES_USER=dumb
+      - POSTGRES_PASSWORD=test_password_please_ignore
+      - POSTGRES_DB=sor
+    ports:
+    - 5432:5432/tcp
