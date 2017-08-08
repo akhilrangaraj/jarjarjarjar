@@ -35,3 +35,9 @@ java.lang.NoSuchMethodError: io.netty.handler.ssl.SslContextBuilder.protocols([L
 ```
 
 Some conflict between netty-all in dispatch, and netty-handler in the postgres lib.
+
+
+## How to JAR JARJARJARJARJARAJrjarjaksrjafkldfjasldkgjslkjgb
+
+- `docker-compose up`
+- sbt run
